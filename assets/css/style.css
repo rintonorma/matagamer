@@ -244,6 +244,9 @@ footer a:hover{
   .section-contact h2 {
     font-size: 40px;
   }
+  footer .justify-content-center{
+    justify-content: flex-start!important;
+  }
 }
 
 /* ---------------------------------------------------
