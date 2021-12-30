@@ -52,6 +52,9 @@ a:focus {
   outline: none;
   box-shadow: none!important;
 }
+.ratio-9x16 {
+  --aspect-ratio: calc(16 / 9 * 100%);
+}
 .btn-danger {
   color: #fff;
   background-color: #fd0300;
@@ -61,6 +64,15 @@ a:focus {
   color: #fff;
   background-color: #c70603;
   border-color: #c70603;
+}
+.w-10{
+  width: 10%;
+}
+.navbar.sticky-top{
+  background-color: #ffe400 !important;
+}
+.navbar.sticky-top #navbarNav::before{
+  background: transparent;
 }
 .navbar.fixed-top.scrolled {
   background-color: #ffe400 !important;
@@ -173,6 +185,24 @@ a:focus {
   -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.16);
   box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.16);
 }
+.section-talents{
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.section-contact{
+  text-align: center;
+}
+.section-contact h2{
+  font-size: 60px;
+  font-weight: 800;
+}
+footer a{
+  color: #fff;
+}
+footer a:hover{
+  color: #ffe400;
+}
 @media (max-width: 767px){
   .navbar-brand img{
     width: 150px;
@@ -204,6 +234,15 @@ a:focus {
   }
   .section-playlist h4{
     font-size: 12px;
+  }
+  .section-talents{
+    font-size: 12px;
+  }
+  .section-talents .row{
+    align-items: flex-start!important;
+  }
+  .section-contact h2 {
+    font-size: 40px;
   }
 }
 
