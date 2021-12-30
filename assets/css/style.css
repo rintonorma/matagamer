@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&family=Bakbak+One&family=Bebas+Neue&display=swap');
 
 @font-face { font-family: "Ionicons"; src: url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.eot?v=2.0.1"); src: url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.eot?v=2.0.1#iefix") format("embedded-opentype"), url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.ttf?v=2.0.1") format("truetype"), url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.woff?v=2.0.1") format("woff"), url("https://code.ionicframework.com/ionicons/2.0.1/fonts/ionicons.svg?v=2.0.1#Ionicons") format("svg"); font-weight: normal; font-style: normal; }
 
@@ -34,6 +33,12 @@ p {
   font-weight: 500;
   line-height: 1.7em;
 }
+h4{
+  font-family: 'Bakbak One', cursive;
+  font-size: 30px;
+  color: #fff;
+  text-shadow: 0px 0px 3px #000000;
+}
 input,input:focus,button, button:focus{
   outline: none;
   box-shadow: none!important;
@@ -47,28 +52,80 @@ a:focus {
   outline: none;
   box-shadow: none!important;
 }
+.btn-danger {
+  color: #fff;
+  background-color: #fd0300;
+  border-color: #fd0300;
+}
+.btn-danger:hover {
+  color: #fff;
+  background-color: #c70603;
+  border-color: #c70603;
+}
 .navbar.fixed-top.scrolled {
-  background-color: #fff !important;
+  background-color: #ffe400 !important;
   transition: background-color 200ms linear;
+}
+.navbar.fixed-top.scrolled #navbarNav::before{
+  background: transparent;
+}
+#navbarNav::before {
+  content: '';
+  position: absolute;
+  top: 0; 
+  right: -50px; 
+  bottom: 0; 
+  width: 100%;
+  height: 60px;
+  margin: auto;
+  z-index: -1;
+  /*background: #fff;*/
+  transform: skew(-20deg);
+  background: rgb(255,255,255);
+  background: -moz-linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%);
+  background: -webkit-linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%);
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
 }
 .nav-link {
   font-size: 18px;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   font-weight: 700;
   text-shadow: 0px 0px 1px #ffffff;
 }
 
 .heading-hero{
+  font-family: 'Bakbak One', cursive;
   position: absolute;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
   justify-content: center;
-  width: 100%;
-  height: 100%;
   text-shadow: 1px 1px 0px #ffffff;
   font-weight: bold;
-  padding: 20px;
+  padding: 120px;
+  right: 0;
+  top: 0;
+  height: 100%;
+  text-align: right;
+}
+.heading-hero h2{
+  font-size: 80px;
+  text-shadow: 
+    1px 0px 1px #fff9f9, 0px 1px 1px #feb500, 
+    2px 1px 1px #fff9f9, 1px 2px 1px #feb500,
+    3px 2px 1px #fff9f9, 2px 3px 1px #feb500,
+    4px 3px 1px #fff9f9, 3px 4px 1px #feb500,
+    5px 4px 1px #fff9f9, 4px 5px 1px #feb500,
+    6px 5px 1px #fff9f9, 5px 6px 1px #feb500,
+    7px 6px 1px #fff9f9;
+}
+.heading-hero h5{
+  font-size: 40px;
+}
+.heading-hero h6{
+  font-size: 28px;
 }
 
 .bg-content{
@@ -85,10 +142,19 @@ a:focus {
 }
 
 .section-title{
+  font-family: 'Bakbak One', cursive;
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  text-shadow: 
+    1px 0px 1px #ccc, 0px 1px 1px #eee, 
+    2px 1px 1px #ccc, 1px 2px 1px #eee,
+    3px 2px 1px #ccc, 2px 3px 1px #eee,
+    4px 3px 1px #ccc, 3px 4px 1px #eee,
+    5px 4px 1px #ccc, 4px 5px 1px #eee,
+    6px 5px 1px #ccc, 5px 6px 1px #eee,
+    7px 6px 1px #ccc;
+  letter-spacing: 2px;
 }
 .object-cover{
   object-fit: cover;
@@ -98,7 +164,15 @@ a:focus {
   font-family: 'Bebas Neue', cursive;
   font-size: 24px;
 }
-
+.section-playlist .banner-playlist{
+  transition: all ease .5s;
+}
+.section-playlist .banner-playlist:hover{
+  transform: scale(1.03);
+  -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.16);
+  -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.16);
+  box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.16);
+}
 @media (max-width: 767px){
   .navbar-brand img{
     width: 150px;
@@ -109,6 +183,27 @@ a:focus {
   .navbar.fixed-top{
     position: -webkit-sticky;
     position: sticky;
+  }
+  .heading-hero{
+    padding: 20px;
+  }
+  .heading-hero h5 {
+    font-size: 18px;
+  }
+  .heading-hero h4 {
+    font-size: 16px;
+  }
+  .heading-hero h2 {
+    font-size: 30px;
+  }
+  .heading-hero h6 {
+    font-size: 16px;
+  }
+  .section-playlist .p-4{
+    padding: 10px!important;
+  }
+  .section-playlist h4{
+    font-size: 12px;
   }
 }
 
