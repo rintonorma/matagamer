@@ -75,9 +75,46 @@ $(document).ready(function () {
     ]
   });
 
+  $('.product-image').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.product-thumb'
+  });
+  $('.product-thumb').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.product-image',
+    dots: false,
+    arrows: true,
+    centerMode: true,
+    focusOnSelect: true,
+    prevArrow: '<button class="slide-arrow prev-arrow"><ion-icon name="chevron-back-outline"></ion-icon></button>',
+    nextArrow: '<button class="slide-arrow next-arrow"><ion-icon name="chevron-forward-outline"></ion-icon></button>',
+  });
+
   $(document).scroll(function () {
     var $nav = $(".navbar.fixed-top");
     $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
+
+  // multiple expanding content areas
+  $(".expand-toggle").click(function (e) {
+    e.preventDefault();
+
+    var $this = $(this);
+    var expandHeight = $this.prev().find(".inner-bit").height();
+
+    if ($this.prev().hasClass("expanded")) {
+      $this.prev().removeClass("expanded");
+      $this.prev().attr("style", "");
+      $this.html("Tampilkan semua");
+    } else {
+      $this.prev().addClass("expanded");
+      $this.prev().css("max-height", expandHeight);
+      $this.html("Tutup");
+    }
   });
 
 });

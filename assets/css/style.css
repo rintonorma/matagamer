@@ -33,6 +33,12 @@ p {
   font-weight: 500;
   line-height: 1.7em;
 }
+h1{
+  font-family: 'Bakbak One', cursive;
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
 h4{
   font-family: 'Bakbak One', cursive;
   font-size: 30px;
@@ -67,6 +73,57 @@ a:focus {
 }
 .w-10{
   width: 10%;
+}
+.pricing-h3{
+  font-weight: 800;
+  color: #ff2e00;
+}
+.expander {
+  position: relative;
+  overflow: hidden;
+  max-height: 100px;
+  transition: max-height 0.2s ease-in-out;
+  -moz-transition: max-height 0.2s ease-in-out;
+  -webkit-transition: max-height 0.2s ease-in-out;
+}
+.expander.expanded {
+  max-height: 10000px;
+}
+
+.expander:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(#F9FBFB00 50%, #ffffff);
+  transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -webkit-transition: opacity 0.2s ease-in-out;
+}
+.expander.expanded:before {
+  opacity: 0;
+}
+.expand-toggle{
+  padding: 0;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  color: #999;
+}
+
+@media only screen and (min-width: 480px){
+  .expander {
+    max-height: 96px;
+  }
+}
+@media only screen and (min-width: 720px){
+  .expander {
+    max-height: 100px;
+  }
+}
+.navbar-expand-lg{
+  overflow: hidden;
 }
 .navbar.sticky-top{
   background-color: #ffe400 !important;
@@ -171,6 +228,16 @@ a:focus {
 .object-cover{
   object-fit: cover;
 }
+.card-title{
+  display: block;
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
 
 .bebas-title{
   font-family: 'Bebas Neue', cursive;
@@ -181,9 +248,9 @@ a:focus {
 }
 .section-playlist .banner-playlist:hover{
   transform: scale(1.03);
-  -webkit-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.16);
-  -moz-box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.16);
-  box-shadow: 0px 10px 5px 0px rgba(0,0,0,0.16);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.16);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.16);
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.16);
 }
 .section-talents{
   font-size: 22px;
@@ -196,6 +263,36 @@ a:focus {
 .section-contact h2{
   font-size: 60px;
   font-weight: 800;
+}
+.section-product .card{
+  transition: all ease .5s;
+}
+.section-product .card:hover{
+  transform: scale(1.03);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.16);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.16);
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.16);
+}
+.section-product .card:hover h5{
+  color: #ff2e00;
+}
+.product-thumb .prev-arrow ion-icon, .product-thumb .next-arrow ion-icon {
+  font-size: 18px;
+  --ionicon-stroke-width: 18px;
+}
+.product-thumb .prev-arrow {
+  left: 0px;
+}
+.product-thumb .next-arrow {
+  right: 0px;
+}
+.product-thumb .prev-arrow, .product-thumb .next-arrow{
+  transform: translateY(-20px);
+}
+.product-thumb .slick-current{
+  -webkit-box-shadow: 0px 0px 0px 1px #ff2e00;
+  -moz-box-shadow: 0px 0px 0px 1px #ff2e00;
+  box-shadow: 0px 0px 0px 1px #ff2e00;
 }
 footer a{
   color: #fff;
@@ -243,6 +340,9 @@ footer a:hover{
   }
   .section-contact h2 {
     font-size: 40px;
+  }
+  .section-product h1{
+    font-size: 36px;
   }
   footer .justify-content-center{
     justify-content: flex-start!important;
